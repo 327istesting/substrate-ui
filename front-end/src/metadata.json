@@ -1,0 +1,343 @@
+{
+    "source": {
+      "hash": "0x713a82bf74f4ffd79e7277e6c8c9222d02159e90f7cc87da3d516a9d7ee459f4",
+      "language": "ink! 4.0.0-beta",
+      "compiler": "rustc 1.65.0",
+      "build_info": {
+        "build_mode": "Debug",
+        "cargo_contract_version": "2.0.0-beta",
+        "rust_toolchain": "stable-aarch64-apple-darwin",
+        "wasm_opt_settings": {
+          "keep_debug_symbols": false,
+          "optimization_passes": "Z"
+        }
+      }
+    },
+    "contract": {
+      "name": "fqy",
+      "version": "0.1.0",
+      "authors": [
+        "[your_name] <[your_email]>"
+      ]
+    },
+    "spec": {
+      "constructors": [
+        {
+          "args": [
+            {
+              "label": "init_value",
+              "type": {
+                "displayName": [
+                  "u32"
+                ],
+                "type": 0
+              }
+            }
+          ],
+          "docs": [
+            "Constructor that initializes the `bool` value to the given `init_value`."
+          ],
+          "label": "new",
+          "payable": false,
+          "returnType": {
+            "displayName": [
+              "ink_primitives",
+              "ConstructorResult"
+            ],
+            "type": 1
+          },
+          "selector": "0x9bae9d5e"
+        }
+      ],
+      "docs": [],
+      "events": [],
+      "lang_error": {
+        "displayName": [
+          "ink",
+          "LangError"
+        ],
+        "type": 3
+      },
+      "messages": [
+        {
+          "args": [],
+          "docs": [
+            " Simply returns the current value of our `bool`."
+          ],
+          "label": "get",
+          "mutates": false,
+          "payable": false,
+          "returnType": {
+            "displayName": [
+              "ink",
+              "MessageResult"
+            ],
+            "type": 4
+          },
+          "selector": "0x2f865bd9"
+        },
+        {
+          "args": [],
+          "docs": [],
+          "label": "set",
+          "mutates": true,
+          "payable": false,
+          "returnType": {
+            "displayName": [
+              "ink",
+              "MessageResult"
+            ],
+            "type": 5
+          },
+          "selector": "0xe8c45eb6"
+        }
+      ]
+    },
+    "storage": {
+      "root": {
+        "layout": {
+          "struct": {
+            "fields": [
+              {
+                "layout": {
+                  "leaf": {
+                    "key": "0x00000000",
+                    "ty": 0
+                  }
+                },
+                "name": "uuid"
+              }
+            ],
+            "name": "Fqy"
+          }
+        },
+        "root_key": "0x00000000"
+      }
+    },
+    "types": [
+      {
+        "id": 0,
+        "type": {
+          "def": {
+            "primitive": "u32"
+          }
+        }
+      },
+      {
+        "id": 1,
+        "type": {
+          "def": {
+            "variant": {
+              "variants": [
+                {
+                  "fields": [
+                    {
+                      "type": 2
+                    }
+                  ],
+                  "index": 0,
+                  "name": "Ok"
+                },
+                {
+                  "fields": [
+                    {
+                      "type": 3
+                    }
+                  ],
+                  "index": 1,
+                  "name": "Err"
+                }
+              ]
+            }
+          },
+          "params": [
+            {
+              "name": "T",
+              "type": 2
+            },
+            {
+              "name": "E",
+              "type": 3
+            }
+          ],
+          "path": [
+            "Result"
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "type": {
+          "def": {
+            "tuple": []
+          }
+        }
+      },
+      {
+        "id": 3,
+        "type": {
+          "def": {
+            "variant": {
+              "variants": [
+                {
+                  "index": 1,
+                  "name": "CouldNotReadInput"
+                }
+              ]
+            }
+          },
+          "path": [
+            "ink_primitives",
+            "LangError"
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "type": {
+          "def": {
+            "variant": {
+              "variants": [
+                {
+                  "fields": [
+                    {
+                      "type": 0
+                    }
+                  ],
+                  "index": 0,
+                  "name": "Ok"
+                },
+                {
+                  "fields": [
+                    {
+                      "type": 3
+                    }
+                  ],
+                  "index": 1,
+                  "name": "Err"
+                }
+              ]
+            }
+          },
+          "params": [
+            {
+              "name": "T",
+              "type": 0
+            },
+            {
+              "name": "E",
+              "type": 3
+            }
+          ],
+          "path": [
+            "Result"
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "type": {
+          "def": {
+            "variant": {
+              "variants": [
+                {
+                  "fields": [
+                    {
+                      "type": 6
+                    }
+                  ],
+                  "index": 0,
+                  "name": "Ok"
+                },
+                {
+                  "fields": [
+                    {
+                      "type": 3
+                    }
+                  ],
+                  "index": 1,
+                  "name": "Err"
+                }
+              ]
+            }
+          },
+          "params": [
+            {
+              "name": "T",
+              "type": 6
+            },
+            {
+              "name": "E",
+              "type": 3
+            }
+          ],
+          "path": [
+            "Result"
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "type": {
+          "def": {
+            "variant": {
+              "variants": [
+                {
+                  "fields": [
+                    {
+                      "type": 2
+                    }
+                  ],
+                  "index": 0,
+                  "name": "Ok"
+                },
+                {
+                  "fields": [
+                    {
+                      "type": 7
+                    }
+                  ],
+                  "index": 1,
+                  "name": "Err"
+                }
+              ]
+            }
+          },
+          "params": [
+            {
+              "name": "T",
+              "type": 2
+            },
+            {
+              "name": "E",
+              "type": 7
+            }
+          ],
+          "path": [
+            "Result"
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "type": {
+          "def": {
+            "variant": {
+              "variants": [
+                {
+                  "index": 0,
+                  "name": "NotGood"
+                }
+              ]
+            }
+          },
+          "path": [
+            "fqy",
+            "fqy",
+            "Error"
+          ]
+        }
+      }
+    ],
+    "version": "4"
+  }
